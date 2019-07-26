@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SortFragment">
+
+
+    <TextView
+        android:id="@+id/sort_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="146dp"
+        android:text="SORT BY"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_margin="8dp"/>
+
+    <LinearLayout
+        android:id="@+id/rgroup_lin_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sort_text_view"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RadioGroup
+            android:id="@+id/type_sort_group"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_weight="1">
+
+            <RadioButton
+                android:id="@+id/due_date_rbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Due date" />
+
+            <RadioButton
+                android:id="@+id/category_rbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Category" />
+
+            <RadioButton
+                android:id="@+id/priority_rbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Priority" />
+
+            <RadioButton
+                android:id="@+id/title_rbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Title" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_weight="1"
+            android:id="@+id/order_sort_group">
+
+            <RadioButton
+                android:id="@+id/asc_rbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Ascending order" />
+
+            <RadioButton
+                android:id="@+id/desc_rbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Descending order" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/rgroup_lin_layout"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/sort_ok_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="OK" />
+
+
+        <Button
+            android:id="@+id/sort_dismiss_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="DISMISS" />
+    </LinearLayout>
+
+</RelativeLayout>
